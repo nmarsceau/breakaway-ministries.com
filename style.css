@@ -1,0 +1,88 @@
+body {
+  font-family: sans-serif;
+}
+ul, ol {
+  padding-left: 20px;
+}
+label {
+  line-height: 1.3em;
+  margin-bottom: 0px;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-style: oblique;
+  color: #0e3386;
+}
+
+.bg-light-blue {
+  background-color: #aacaf4;
+}
+.orange, a.orange {
+  color: #f66733;
+}
+a.orange:hover {
+  color: #e55622;
+}
+.blue, a.blue {
+  color: #0e3386;
+}
+a.blue:hover {
+  color: #0d2275;
+}
+
+.font-lg {
+  font-size: 1.5em;
+}
+.font-xl {
+  font-size: 2.5em;
+}
+
+[class^="arrow"] {
+  border: solid #0e3386;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 10px;
+}
+.arrow-right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+.arrow-left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+.required::after {
+  content: " required";
+  color: red;
+  font-size: 11px;
+}
+.not-required::after {
+  content: " not required";
+  color: blue;
+  font-size: 11px;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.page-wrapper .flex-size-auto {
+  flex-shrink: 0;
+}
+.page-wrapper .flex-fill-space {
+  flex: 1 0 auto;
+}
+
+#main-nav ul li a {
+  font-size: 1.2rem;
+  border-bottom: 3px solid #fff;
+}
+
+#main-nav ul li a:hover {
+  border-bottom: 3px solid #0d2275;
+}
+
+#main-nav ul li a.orange:hover {
+  border-bottom: 3px solid #e55622;
+}
