@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="title" content="" />
+    <meta name="description" content="" />
+    <meta name="keyword" content="" />
+    <title>Fall 2019 | Breakaway Sports Ministries</title>
+    <link href="reset.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
+    <link href="bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="images/favicon.ico" />
+</head>
+<body>
+    <header class="mb-5">
+        <nav class="main-menu shadow">
+            <a class="brand ml-3" href="index.html"><img src="images/logo.png" alt="" class="w-100" /></a>
+            <button id="main-menu-toggle" type="button" aria-label="Toggle main menu"></button>
+            <ul class="collapsed">
+                <li><a href="program.html">Program Details</a></li>
+                <li><a href="philosophy.html">Our Philosophy</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="fall_2019.html" class="orange">Fall 2019</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="pt-4">
+        <div class="container">
+            <div class="row mt-4 mb-5">
+                <div class="col-12">
+                    <h1>Fall 2019</h1>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-12">
+                    <h2>8-Week Soccer League</h2>
+                    <p>
+                        This fall, Breakaway Sports Ministries is hosting an eight-week
+                        soccer league for children ages 3 - 8.
+                        The program consists of seven weeks of league play and an
+                        end-of-season tournament. During league
+                        play, each team will have one practice per week and one
+                        game on Saturday. Your child will receive
+                        a playbook, soccer ball, and shirt.
+                    </p>
+                    <p>
+                        Each week, your child will complete a 5-day devotional playbook.
+                        Your child&apos;s coach will also give a challenge
+                        at the end of practice each week.
+                    </p>
+                    <p>
+                        Participation in the league costs $60. Please <a href="#registration-form">register</a>
+                        using the form below. Payment will be collected on registration day.
+                        If you have any questions, please
+                        <a href="mailto:breakawaysportsllc@gmail.com">email Tim Schuyler</a>.
+                    </p>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-12">
+                    <h2>When?</h2>
+                    <p>
+                        Registration will be <time datetime="2018-08-29">August 29th</time>.
+                        Come out to our event, and your child will have a chance to try out
+                        for the soccer league.
+                    </p>
+                    <p>
+                        The first practice will be <time datetime="2018-09-05">September
+                        5th</time>, and the first game will be <time datetime="2018-09-07">
+                        September 7th</time>. The season will end with a tournament on
+                        <time datetime="2018-10-26">October 26th</time>.
+                    </p>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-12">
+                    <h2>Where?</h2>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <p>
+                                The league will meet on Faith Baptist Church&apos;s ball field. Come to
+                                Frontline Drive to park.
+                            </p>
+                        </div>
+                        <div class="col-lg-8">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3368.247654119717!2d-82.35160874092207!3d34.89741074584967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88582dcd8ad782b9%3A0x37bfea5a7b6d9ad5!2sFrontline+Dr%2C+Taylors%2C+SC+29687!5e0!3m2!1sen!2sus!4v1565740109886!5m2!1sen!2sus" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="py-5"></div>
+            <!-- TODO: show a success message upon success -->
+            <!-- <strong>Success!</strong> You've submitted your registration. We'll contact you soon. -->
+            <form id="registration-form" action="submit.html" method="post" class="validate"> <!-- https://formspree.io/meqrzzlq -->
+                <div class="row mb-4">
+                    <h2 class="col-12">Register</h2>
+                </div>
+                <div class="row">
+                    <h3 class="col-12">Child&apos;s Information</h3>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-6 col-lg-4">
+                        <label class="d-block">
+                            Name<span class="required">required</span>
+                            <input type="text" name="child-name" class="form-control form-control-lg"
+                                required maxlength="250">
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <label>Birthday<span class="required">required</span></label>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-sm-6 col-md-3">
+                        <label class="d-block">
+                            <small>Month</small>
+                            <select name="child-birth-month" class="form-control form-control-lg" required>
+                                <option value="">-</option>
+                                <option value="January">January</option>
+                                <option value="February">February</option>
+                                <option value="March">March</option>
+                                <option value="April">April</option>
+                                <option value="May">May</option>
+                                <option value="June">June</option>
+                                <option value="July">July</option>
+                                <option value="August">August</option>
+                                <option value="September">September</option>
+                                <option value="October">October</option>
+                                <option value="November">November</option>
+                                <option value="December">December</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="col-sm-4 col-md-2">
+                        <label class="d-block">
+                            <small>Day</small>
+                            <input type="number" name="child-birth-day" class="form-control form-control-lg" disabled
+                                required min="1" max="31">
+                        </label>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col-sm-6 col-md-3">
+                        <label class="d-block">
+                            Shirt Size<span class="required">required</span>
+                            <select name="shirt-size" class="form-control form-control-lg" required>
+                                <option value="">-</option>
+                                <option value="Youth Extra Small">Youth Extra Small</option>
+                                <option value="Youth Small">Youth Small</option>
+                                <option value="Youth Medium">Youth Medium</option>
+                                <option value="Youth Large">Youth Large</option>
+                            </select>
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <h3 class="col-12">Parent&apos;s Information</h3>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <label>Name(s)</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-lg-3">
+                        <label class="d-block">
+                            <small>First</small><span class="required">required</span>
+                            <input type="text" name="parent-first-1" class="form-control form-control-lg"
+                                required maxlength="250">
+                        </label>
+                    </div>
+                    <div class="col-md-4 col-lg-3">
+                        <label class="d-block">
+                            <small>Last</small><span class="required">required</span>
+                            <input type="text" name="parent-last-1" class="form-control form-control-lg"
+                                required maxlength="250">
+                        </label>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-4 col-lg-3">
+                        <label class="d-block">
+                            <small>First</small><span class="optional">optional</span>
+                            <input type="text" name="parent-first-2" class="form-control form-control-lg"
+                                maxlength="250">
+                        </label>
+                    </div>
+                    <div class="col-md-4 col-lg-3">
+                        <label class="d-block">
+                            <small>Last</small><span class="optional">optional</span>
+                            <input type="text" name="parent-last-2" class="form-control form-control-lg"
+                                maxlength="250">
+                        </label>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-6 col-lg-5">
+                        <label class="d-block">
+                            Email Address<span class="required">required</span>
+                            <input type="email" name="parent-email" class="form-control form-control-lg"
+                                required maxlength="320" title="Please enter a valid email address."
+                                pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*(\.\w{2,})+$">
+                        </label>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-7 col-lg-5">
+                        <label class="d-block">
+                            Emergency Contact Phone Number<span class="required">required</span>
+                            <div class="row">
+                                <div class="col-12 col-md-9">
+                                    <input type="tel" name="emergency-phone" class="form-control form-control-lg"
+                                        required minlength="7" maxlength="17">
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <label>Address<span class="required">required</span></label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-lg-6">
+                        <label class="d-block">
+                            <small>Line 1</small>
+                            <input type="text" name="addr-line-1" class="form-control form-control-lg"
+                                required maxlength="250">
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-lg-6">
+                        <label class="d-block">
+                            <small>Line 2</small>
+                            <input type="text" name="addr-line-2" class="form-control form-control-lg"
+                                maxlength="250">
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-lg-3">
+                        <label class="d-block">
+                            <small>City</small>
+                            <input type="text" name="addr-city" class="form-control form-control-lg"
+                                required maxlength="100">
+                        </label>
+                    </div>
+                    <div class="col-md-2 col-lg-1">
+                        <label class="d-block">
+                            <small>State</small>
+                            <input type="text" name="addr-state" class="form-control form-control-lg"
+                                required minlength="2" maxlength="2">
+                        </label>
+                    </div>
+                    <div class="col-md-2">
+                        <label class="d-block">
+                            <small>Zip Code</small>
+                            <input type="text" name="addr-zip" class="form-control form-control-lg"
+                                required minlength="5" maxlength="5" pattern="[0-9]{5}">
+                        </label>
+                    </div>
+                </div>
+                <div class="row mt-4 mb-5">
+                    <div class="col-md-4 col-lg-3">
+                        <button type="submit" class="btn btn-lg px-5" style="background-color: #f66733; color: white;">Register</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer class="footer bg-dark text-light py-4 px-3 py-sm-5 px-sm-5">
+        &copy; 2018 Breakaway Sports Ministries
+        <address>Greenville, SC</address>
+        <a href="https://www.facebook.com/Breakaway-Sports-Ministries-81378962634/" target="_blank">
+            <img src="images/fb.png" alt="Facebook" width="40" height="40" />
+        </a>
+    </footer>
+    <script src="script.js"></script>
+    <script src="validate_form.js" async></script>
+    <script>
+        const registration_form = document.querySelector('form#registration-form');
+        const child_birth_month = registration_form.querySelector('[name="child-birth-month"]');
+        const child_birth_day = registration_form.querySelector('[name="child-birth-day"]');
+
+        child_birth_month.addEventListener('change', function() {
+            const selected_month = child_birth_month.value;
+            const selected_day = Number(child_birth_day.value);
+            if (selected_month === '') {
+                child_birth_day.value = '';
+                child_birth_day.disabed = true;
+            }
+            else {
+                child_birth_day.disabled = false;
+                if (selected_month === 'February') {
+                    if (selected_day > 29) {child_birth_day.value = '';}
+                    child_birth_day.max = 29;
+                }
+                else if (['April', 'June', 'September', 'November'].indexOf(selected_month) !== -1) {
+                    if (selected_day > 30) {child_birth_day.value = '';}
+                    child_birth_day.max = 30;
+                }
+                else {
+                    child_birth_day.max = 31;
+                }
+            }
+        }, false);
+    </script>
+</body>
+</html>
