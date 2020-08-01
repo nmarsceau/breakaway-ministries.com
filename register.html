@@ -162,7 +162,7 @@
                                 Please upload a photo of your facilities<span class="required">required</span>
                                 <input type="file" name="facilities-image" class="form-control-file mt-1"
                                     accept=".jpg, .jpeg, .png">
-                                <p class="mt-2"><small><em>You may select one JPEG or PNG image that is less than 3 MB.</em></small></p>
+                                <p class="mt-2"><small><em>You may select one JPEG or PNG image that is less than 5 MB.</em></small></p>
                             </label>
                         </div>
                     </div>
@@ -308,8 +308,8 @@
                 if (incorrect_file_types.length > 0) {
                     return incorrect_file_types.join(', ') + (incorrect_file_types.length === 1 ? ' is not an accepted file type.' : ' are not accepted file types.');
                 }
-                if (total_file_size > 3145728) { // 3 MB
-                    return 'The file you selected is too large (' + (Math.round(total_file_size / 100000) / 10) + ' MB). The limit is 3 MB.';
+                if (total_file_size > 5242880) { // 5 MB
+                    return 'The file you selected is too large (' + (Math.round(total_file_size / 100000) / 10) + ' MB). The limit is 5 MB.';
                 }
                 return null;
             }
