@@ -83,7 +83,7 @@
                     <div class="col-md-6 col-lg-5">
                         <label class="d-block">
                             Organization Name<span class="required">required</span>
-                            <input type="text" name="org-name" class="form-control form-control-lg"
+                            <input type="text" name="organization-name" class="form-control form-control-lg"
                                 required maxlength="150">
                         </label>
                     </div>
@@ -117,7 +117,7 @@
                             Approximately what is your organization&apos;s size?<span class="required">required</span>
                             <div class="row">
                                 <div class="col-md-4 col-lg-3">
-                                    <select name="org-size" class="form-control form-control-lg"
+                                    <select name="organization-size" class="form-control form-control-lg"
                                         required>
                                         <option value="">-</option>
                                         <option value="Less than 200">Less than 200</option>
@@ -143,13 +143,13 @@
                     <div class="col-12 have-facilities-question">
                         <div class="form-check form-check-inline">
                             <label class="form-check-label">
-                                <input type="radio" name="have-facilities" value="Yes" class="form-check-input" required>
+                                <input type="radio" name="have-facilities-to-run-program" value="Yes" class="form-check-input" required>
                                 Yes
                             </label>
                         </div>
                         <div class="form-check form-check-inline">
                             <label class="form-check-label">
-                                <input type="radio" name="have-facilities" value="No" class="form-check-input" required>
+                                <input type="radio" name="have-facilities-to-run-program" value="No" class="form-check-input" required>
                                 No
                             </label>
                         </div>
@@ -204,7 +204,7 @@
                             Please provide a realistic estimate of the number of players in your program<span class="required">required</span>
                             <div class="row">
                                 <div class="col-12 col-md-4 col-lg-3">
-                                    <select name="num-players" class="form-control form-control-lg"
+                                    <select name="number-players" class="form-control form-control-lg"
                                         required>
                                         <option value="">-</option>
                                         <option value="Less than 36">Less than 36</option>
@@ -225,7 +225,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-12 col-md-4 col-lg-3">
-                                    <select name="num-volunteers" class="form-control form-control-lg"
+                                    <select name="number-volunteers" class="form-control form-control-lg"
                                         required>
                                         <option value="">-</option>
                                         <option value="8">8</option>
@@ -267,7 +267,7 @@
         const facilities_details_container = document.getElementById('facilities-details');
         const have_facilities_question = document.querySelector('.have-facilities-question');
         have_facilities_question.addEventListener('change', function(event) {
-            const selected_option = document.querySelector('[name="have-facilities"]:checked');
+            const selected_option = document.querySelector('[name="have-facilities-to-run-program"]:checked');
             const facilities_questions = facilities_details_container.querySelectorAll('input, textarea');
             if (selected_option === null || selected_option.value === 'No') {
                 facilities_details_container.classList.add('d-none');
@@ -320,8 +320,7 @@
             '36-72': '10-15',
             'More than 72': '15 or more'
         };
-        const number_players_input = document.querySelector('[name="num-players"]');
-        const number_volunteers = document.querySelector('[name="num-volunteers"]');
+        const number_players_input = document.querySelector('[name="number-players"]');
         const number_volunteers_suggestion_phrase = document.getElementById('number-volunteers-suggestion-phrase');
         const number_volunteers_suggestion = document.getElementById('number-volunteers-suggestion');
         number_players_input.addEventListener('change', function(event) {

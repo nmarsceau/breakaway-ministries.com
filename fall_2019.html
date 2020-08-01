@@ -120,7 +120,7 @@
                     <div class="col-sm-6 col-md-3">
                         <label class="d-block">
                             <small>Month</small>
-                            <select name="child-birth-month" class="form-control form-control-lg" required>
+                            <select name="birth-month" class="form-control form-control-lg" required>
                                 <option value="">-</option>
                                 <option value="January">January</option>
                                 <option value="February">February</option>
@@ -140,7 +140,7 @@
                     <div class="col-sm-4 col-md-2">
                         <label class="d-block">
                             <small>Day</small>
-                            <input type="number" name="child-birth-day" class="form-control form-control-lg" disabled
+                            <input type="number" name="birth-day" class="form-control form-control-lg" disabled
                                 required min="1" max="31">
                         </label>
                     </div>
@@ -171,14 +171,14 @@
                     <div class="col-md-4 col-lg-3">
                         <label class="d-block">
                             <small>First</small><span class="required">required</span>
-                            <input type="text" name="parent-first-1" class="form-control form-control-lg"
+                            <input type="text" name="parent-1-first" class="form-control form-control-lg"
                                 required maxlength="250">
                         </label>
                     </div>
                     <div class="col-md-4 col-lg-3">
                         <label class="d-block">
                             <small>Last</small><span class="required">required</span>
-                            <input type="text" name="parent-last-1" class="form-control form-control-lg"
+                            <input type="text" name="parent-1-last" class="form-control form-control-lg"
                                 required maxlength="250">
                         </label>
                     </div>
@@ -187,14 +187,14 @@
                     <div class="col-md-4 col-lg-3">
                         <label class="d-block">
                             <small>First</small><span class="optional">optional</span>
-                            <input type="text" name="parent-first-2" class="form-control form-control-lg"
+                            <input type="text" name="parent-2-first" class="form-control form-control-lg"
                                 maxlength="250">
                         </label>
                     </div>
                     <div class="col-md-4 col-lg-3">
                         <label class="d-block">
                             <small>Last</small><span class="optional">optional</span>
-                            <input type="text" name="parent-last-2" class="form-control form-control-lg"
+                            <input type="text" name="parent-2-last" class="form-control form-control-lg"
                                 maxlength="250">
                         </label>
                     </div>
@@ -203,7 +203,7 @@
                     <div class="col-md-6 col-lg-5">
                         <label class="d-block">
                             Email Address<span class="required">required</span>
-                            <input type="email" name="parent-email" class="form-control form-control-lg"
+                            <input type="email" name="email" class="form-control form-control-lg"
                                 required maxlength="320" title="Please enter a valid email address."
                                 pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*(\.\w{2,})+$">
                         </label>
@@ -231,7 +231,7 @@
                     <div class="col-md-8 col-lg-6">
                         <label class="d-block">
                             <small>Line 1</small>
-                            <input type="text" name="addr-line-1" class="form-control form-control-lg"
+                            <input type="text" name="address-line-1" class="form-control form-control-lg"
                                 required maxlength="250">
                         </label>
                     </div>
@@ -240,7 +240,7 @@
                     <div class="col-md-8 col-lg-6">
                         <label class="d-block">
                             <small>Line 2</small>
-                            <input type="text" name="addr-line-2" class="form-control form-control-lg"
+                            <input type="text" name="address-line-2" class="form-control form-control-lg"
                                 maxlength="250">
                         </label>
                     </div>
@@ -249,21 +249,21 @@
                     <div class="col-md-4 col-lg-3">
                         <label class="d-block">
                             <small>City</small>
-                            <input type="text" name="addr-city" class="form-control form-control-lg"
+                            <input type="text" name="city" class="form-control form-control-lg"
                                 required maxlength="100">
                         </label>
                     </div>
                     <div class="col-md-2 col-lg-1">
                         <label class="d-block">
                             <small>State</small>
-                            <input type="text" name="addr-state" class="form-control form-control-lg"
+                            <input type="text" name="state" class="form-control form-control-lg"
                                 required minlength="2" maxlength="2">
                         </label>
                     </div>
                     <div class="col-md-2">
                         <label class="d-block">
                             <small>Zip Code</small>
-                            <input type="text" name="addr-zip" class="form-control form-control-lg"
+                            <input type="text" name="zip" class="form-control form-control-lg"
                                 required minlength="5" maxlength="5" pattern="[0-9]{5}">
                         </label>
                     </div>
@@ -287,8 +287,8 @@
     <script src="validate_form.js" async></script>
     <script>
         const registration_form = document.querySelector('form#registration-form');
-        const child_birth_month = registration_form.querySelector('[name="child-birth-month"]');
-        const child_birth_day = registration_form.querySelector('[name="child-birth-day"]');
+        const child_birth_month = registration_form.querySelector('[name="birth-month"]');
+        const child_birth_day = registration_form.querySelector('[name="birth-day"]');
 
         child_birth_month.addEventListener('change', function() {
             const selected_month = child_birth_month.value;

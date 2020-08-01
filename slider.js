@@ -16,7 +16,9 @@
         slider.last_user_interaction = null;
         slider.initial_x = null;
         slider.initial_y = null;
-        move_to_slide(slider, slider.current_slide);
+        window.addEventListener('load', function() {
+            move_to_slide(slider, slider.current_slide);
+        });
         window.addEventListener('resize', function() {
             slider.style.height = slider.slides[slider.current_slide].clientHeight + 'px';
         });
