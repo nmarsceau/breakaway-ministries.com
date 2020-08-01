@@ -36,6 +36,15 @@ h1, h2, h3, h4, h5, h6 {
 .bg-light-blue {
     background-color: #aacaf4;
 }
+
+.btn-orange {
+    background-color: #f66733;
+    color: #ffffff;
+}
+.btn-orange:hover {
+    background-color: #ec460a;
+    color: #ffffff;
+}
   
 .font-lg {
     font-size: 1.5em;
@@ -251,6 +260,7 @@ span.optional {
     color: #ae1313;
     font-size: 0.8em;
     font-style: italic;
+    margin-left: 10px;
 }
 
 

@@ -2,14 +2,18 @@ function field_has_error(field) {
     if (field.disabled || field.type === 'reset' || field.type === 'submit' || field.type === 'button') return null;
     if (field.hasAttribute('data-custom-validator') && typeof custom_validators === 'object' && custom_validators !== null) {
         const validator_name = field.getAttribute('data-custom-validator');
-        if (validity !== '' && typeof custom_validators[validator_name] === 'function') {
+        if (validator_name !== '' && typeof custom_validators === 'object' && custom_validators !== null && typeof custom_validators[validator_name] === 'function') {
             const custom_validator_result = custom_validators[validator_name](field);
             if (custom_validator_result !== null) {return custom_validator_result;}
         }
     }
     const validity = field.validity;
     if (validity.valid) return null;
-    if (validity.valueMissing) return 'Please fill out this field.';
+    if (validity.valueMissing) {
+        if (field.type === 'radio' || field.type === 'checkbox') return 'Please select an option.';
+        if (field.type === 'file') return 'Please choose a file.';
+        return 'Please fill out this field.';
+    }
     if (validity.typeMismatch) {
         if (field.type === 'email') return 'Please enter a valid email address.';
         if (field.type === 'url') return 'Please enter a valid URL.';
@@ -101,7 +105,22 @@ for (let i = 0; i < forms.length; i++) {
 
 document.addEventListener('blur', function(event) {
     if (!event.target.form.classList.contains('validate')) return;
-    event.target.value = event.target.value.trim();
+    if (event.target.type !== 'file') {
+        event.target.value = event.target.value.trim();
+    }
+    const error = field_has_error(event.target);
+    if (error === null) {remove_error(event.target);}
+    else {show_error(event.target, error);}
+}, true);
+
+document.addEventListener('input', function(event) {
+    if (!event.target.form.classList.contains('validate')) return;
+    remove_error(event.target);
+}, true);
+
+document.addEventListener('input', function(event) {
+    if (!event.target.form.classList.contains('validate')) return;
+    if (event.target.type !== 'file') return;
     const error = field_has_error(event.target);
     if (error === null) {remove_error(event.target);}
     else {show_error(event.target, error);}
@@ -113,7 +132,9 @@ document.addEventListener('submit', function(event) {
 
     let first_field_with_error = null;
     for (let i = 0; i < fields.length; i++) {
-        fields[i].value = fields[i].value.trim();
+        if (fields[i].type !== 'file') {
+            fields[i].value = fields[i].value.trim();
+        }
         const error = field_has_error(fields[i]);
         if (error !== null) {
             show_error(fields[i], error);

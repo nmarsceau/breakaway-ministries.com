@@ -1,5 +1,3 @@
-<!-- TODO: need to test everything i've been working on. All the JS on this page, form validations, etc. Then I need to address all my TODO comments. -->
-
 <!doctype html>
 <html lang="en" dir="ltr">
 <head>
@@ -40,9 +38,7 @@
                     </p>
                 </div>
             </div>
-            <!-- TODO: show a success message upon success -->
-            <!-- <strong>Success!</strong> You've submitted your registration. We'll contact you soon. -->
-            <form id="registration-form" class="validate" action="submit.html" method="post" enctype="multipart/form-data">
+            <form class="validate" action="submit.html" method="post" enctype="multipart/form-data">
                 <div class="row">
                     <div class="col-12">
                         <h2>Direct Contact</h2>
@@ -51,7 +47,7 @@
                 <div class="row mb-3">
                     <div class="col-md-8 col-lg-6">
                         <label class="d-block">
-                            Name
+                            Name<span class="required">required</span>
                             <input type="text" name="name" class="form-control form-control-lg"
                                 required maxlength="250">
                         </label>
@@ -60,14 +56,14 @@
                 <div class="row">
                     <div class="col-md-6 col-lg-4 mb-3">
                         <label class="d-block">
-                            Email
+                            Email<span class="required">required</span>
                             <input type="email" name="email" class="form-control form-control-lg"
                                 required maxlength="320">
                         </label>
                     </div>
                     <div class="col-md-4 col-lg-3 mb-3">
                         <label class="d-block">
-                            Phone Number
+                            Phone Number<span class="required">required</span>
                             <input type="tel" name="phone" class="form-control form-control-lg"
                                 required minlength="7" maxlength="17">
                         </label>
@@ -81,41 +77,41 @@
                 <div class="row mb-3">
                     <div class="col-md-6 col-lg-5">
                         <label class="d-block">
-                            Organization Name
+                            Organization Name<span class="required">required</span>
                             <input type="text" name="org-name" class="form-control form-control-lg"
-                                required maxlength="250">
+                                required maxlength="150">
                         </label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-4 col-lg-3 mt-3">
                         <label class="d-block">
-                            City
+                            City<span class="required">required</span>
                             <input type="text" name="city" class="form-control form-control-lg"
-                                required maxlength="100">
+                                required maxlength="50">
                         </label>
                     </div>
                     <div class="col-md-2 mt-3">
                         <label class="d-block">
-                            State
+                            State<span class="required">required</span>
                             <input type="text" name="state" class="form-control form-control-lg"
                                 required minlength="2" maxlength="2">
                         </label>
                     </div>
-                    <div class="col-md-2 mt-3">
+                    <div class="col-md-3 col-xl-2 mt-3">
                         <label class="d-block">
-                            Zip Code
+                            Zip Code<span class="required">required</span>
                             <input type="text" name="zip" class="form-control form-control-lg"
                                 required minlength="5" maxlength="5" pattern="[0-9]{5}">
                         </label>
                     </div>
                 </div>
                 <div class="row mt-3">
-                    <div class="col-md-8 col-lg-6 mb-3">
+                    <div class="col-12 mb-3">
                         <label class="d-block">
-                            Approximately what is your organization&apos;s size?
+                            Approximately what is your organization&apos;s size?<span class="required">required</span>
                             <div class="row">
-                                <div class="col-12 col-sm-6 col-xl-5">
+                                <div class="col-md-4 col-lg-3">
                                     <select name="org-size" class="form-control form-control-lg"
                                         required>
                                         <option value="">-</option>
@@ -136,7 +132,7 @@
                 <div class="row">
                     <div class="col-12">
                         <label>
-                            Does your organization have the facilities to run the program?
+                            Does your organization have the facilities to run the program?<span class="required">required</span>
                         </label>
                     </div>
                     <div class="col-12 have-facilities-question">
@@ -154,28 +150,27 @@
                         </div>
                     </div>
                 </div>
-                <div id="facilities-details" class="mb-3 d-none">
+                <div id="facilities-details" class="ml-4 ml-sm-5 d-none">
                     <div class="row mt-3">
-                        <div class="col-12">
+                        <div class="col-12 col-md-10 col-lg-7">
                             <label class="d-block">
-                                Please upload a photo of your facilities
-                                <input type="file" name="facilities-image" class="form-control-file" multiple
-                                    accept=".jpg, .jpeg, .png" data-custom-validator="validate_facility_photos"> <!-- TODO: required (add with JS) -->
-                                <!-- TODO: Verify that I can upload photos taken on my iphone -->
-                                <!-- TODO: add some explanatory text about max file size and supported formats -->
+                                Please upload a photo of your facilities<span class="required">required</span>
+                                <input type="file" name="facilities-image" class="form-control-file mt-1" multiple
+                                    accept=".jpg, .jpeg, .png">
+                                <p class="mt-2"><small><em>We accept JPEG and PNG images, and you may select more than one. The combined file size of all images you select must be less than 20 MB.</em></small></p>
                             </label>
                         </div>
                     </div>
                     <div class="row mt-3">
                         <div class="col-12 col-md-10 col-lg-7">
                             <label class="d-block">
-                                Please estimate the length and width of pictured facilities
-                                <textarea name="facilities-desc" rows="2" class="form-control form-control-lg" maxlength="500"></textarea>
+                                Please estimate the length and width of pictured facilities<span class="required">required</span>
+                                <textarea name="facilities-description" rows="2" class="form-control form-control-lg" maxlength="500"></textarea>
                             </label>
                         </div>
                     </div>
                 </div>
-                <div class="row mt-3">
+                <div class="row mt-4">
                     <div class="col-12">
                         <h2>Program Details</h2>
                     </div>
@@ -183,7 +178,7 @@
                 <div class="row">
                     <div class="col-12">
                         <label class="d-block">
-                            When do you want to do the program?
+                            When do you want to do the program?<span class="required">required</span>
                             <div class="row">
                                 <div class="col-12 col-md-3">
                                     <select name="season" class="form-control form-control-lg"
@@ -201,7 +196,7 @@
                 <div class="row mt-3">
                     <div class="col-12">
                         <label class="d-block">
-                            Please provide a realistic estimate of the number of players in your program
+                            Please provide a realistic estimate of the number of players in your program<span class="required">required</span>
                             <div class="row">
                                 <div class="col-12 col-md-4 col-lg-3">
                                     <select name="num-players" class="form-control form-control-lg"
@@ -219,7 +214,7 @@
                 <div class="row mt-3">
                     <div class="col-12">
                         <label class="d-block">
-                            Please provide a realistic estimate of the number of volunteers you will have
+                            Please provide a realistic estimate of the number of volunteers you will have<span class="required">required</span>
                             <div id="number-volunteers-suggestion-phrase" class="d-none">
                                 <strong>(We recommend <span id="number-volunteers-suggestion"></span>)</strong>
                             </div>
@@ -239,16 +234,15 @@
                         </label>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row mt-4">
                     <div class="col-lg-8">
                         <h2>Comments</h2>
-                        <textarea name="comment" rows="4" class="form-control form-control-lg" maxlength="2500"></textarea>
+                        <textarea name="comment" rows="4" class="form-control form-control-lg count" maxlength="2500"></textarea>
                     </div>
                 </div>
                 <div class="row mt-4 mb-5">
                     <div class="col-md-8 col-lg-5">
-                        <button type="submit" class="btn btn-lg px-5" style="background-color: #f66733; color: white;">Register My Organization</button>
-                        <!-- TODO: make bootstrap-like classes for my orange button colors & use those instead of inline styles -->
+                        <button type="submit" class="btn btn-lg btn-orange px-5">Register My Organization</button>
                     </div>
                 </div>
             </form>
@@ -263,27 +257,56 @@
     </footer>
     <script src="script.js"></script>
     <script src="validate_form.js" async></script>
+    <script src="character_counter.js" async></script>
     <script>
         const facilities_details_container = document.getElementById('facilities-details');
         const have_facilities_question = document.querySelector('.have-facilities-question');
         have_facilities_question.addEventListener('change', function(event) {
             const selected_option = document.querySelector('[name="have-facilities"]:checked');
+            const facilities_questions = facilities_details_container.querySelectorAll('input, textarea');
             if (selected_option === null || selected_option.value === 'No') {
                 facilities_details_container.classList.add('d-none');
-                // TODO: remove all validation options that would mess up submitting if this section was hidden
+                for (let i = 0; i < facilities_questions.length; i++) {
+                    facilities_questions[i].required = false;
+                    facilities_questions[i].classList.remove('error');
+                    facilities_questions[i].removeAttribute('aria-describedby');
+                    if (facilities_questions[i].name === 'facilities-image') {
+                        delete facilities_questions[i].dataset.customValidator;
+                    }
+                }
+                const error_messages = facilities_details_container.querySelectorAll('.error-message');
+                for (let i = 0; i < error_messages.length; i++) {
+                    error_messages[i].remove();
+                }
             }
             else {
                 facilities_details_container.classList.remove('d-none');
-                // TODO: mark all fields with appropriate validation options
+                for (let i = 0; i < facilities_questions.length; i++) {
+                    facilities_questions[i].required = true;
+                    if (facilities_questions[i].name === 'facilities-image') {
+                        facilities_questions[i].dataset.customValidator = 'validate_facility_photos';
+                    }
+                }
             }
         }, false);
 
         const custom_validators = {
             'validate_facility_photos': function(field) {
-                // return null if valid, return an error string if there's an error.
-                // TODO: Validate that the file extension matches jpg, jpeg, or png
-                // TODO: check that individual file sizes are under 3MB, total should be less than 20MB
-                // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file
+                const incorrect_file_types = [];
+                let total_file_size = 0;
+                for (let i = 0; i < field.files.length; i++) {
+                    total_file_size += field.files[i].size;
+                    if (!['image/jpeg', 'image/png'].includes(field.files[i].type)) {
+                        incorrect_file_types.push(field.files[i].name);
+                    }
+                }
+                if (incorrect_file_types.length > 0) {
+                    return incorrect_file_types.join(', ') + (incorrect_file_types.length === 1 ? ' is not an accepted file type.' : ' are not accepted file types.');
+                }
+                if (total_file_size > 20971520) { // 20 MB
+                    return 'The files you selected are ' + (Math.round(total_file_size / 100000) / 10) + ' MB in size.';
+                }
+                return null;
             }
         };
 
@@ -306,8 +329,6 @@
                 number_volunteers_suggestion.innerText = suggested_volunteers_for_players[number_players];
             }
         }, false);
-
-        // TODO: character counters for the text areas on this page (write a reusable script that will do this based on an opt-in class and the maxlength property)
     </script>
 </body>
 </html>
