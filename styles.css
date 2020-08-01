@@ -32,6 +32,13 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #aacaf4;
 }
 
+.btn-xl {
+    font-size: 2rem;
+    line-height: 1.75;
+    padding: 0.75rem 3.5rem;
+    border-radius: 0.35rem;
+}
+
 .btn-orange {
     background-color: #f66733;
     color: #ffffff;
@@ -43,10 +50,6 @@ h1, h2, h3, h4, h5, h6 {
   
 .font-lg {
     font-size: 1.5em;
-}
-
-.font-xl {
-  font-size: 2.5em;
 }
 
 .mission-statement {
