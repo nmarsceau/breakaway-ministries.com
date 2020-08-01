@@ -1,13 +1,8 @@
 /* TABLE OF CONTENTS
 
 1. Global
-2. Header
-3. Navigation Bar
-4. Videos
-5. Forms
-6. Gallery
-7. Translation Links
-8. God's Story Heading Hack
+2. Navigation Bar
+3. Forms
 
 */
 
@@ -85,14 +80,23 @@ footer {
     }
 }
 
-
-
-
-
-
+[class^="arrow"] {
+  border: solid #0e3386;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 10px;
+}
+.arrow-right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+.arrow-left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
 
 /******
-  3. Navigation Bar
+  2. Navigation Bar
 ******/
 nav.main-menu {
     position: sticky;
@@ -233,11 +237,9 @@ nav.main-menu ul li a.orange:hover, nav.main-menu ul li a.orange:active {
     }
 }
 
-
-
-
-
-
+/******
+  3. Forms
+******/
 span.required {
     color: #ae1313;
     font-size: 0.8em;
@@ -261,110 +263,4 @@ span.optional {
     font-size: 0.8em;
     font-style: italic;
     margin-left: 10px;
-}
-
-
-
-
-
-
-
-
-[class^="arrow"] {
-  border: solid #0e3386;
-  border-width: 0 1px 1px 0;
-  display: inline-block;
-  padding: 10px;
-}
-.arrow-right {
-  transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-}
-.arrow-left {
-  transform: rotate(135deg);
-  -webkit-transform: rotate(135deg);
-}
-
-#main-nav ul li a {
-  font-size: 1.2rem;
-  border-bottom: 3px solid #fff;
-}
-
-#main-nav ul li a:hover {
-  border-bottom: 3px solid #0d2275;
-}
-
-#main-nav ul li a.orange:hover {
-  border-bottom: 3px solid #e55622;
-}
-
-
-
-
-
-.slider-wrapper {
-    position: relative;
-    transition: 300ms;
-}
-
-.slider {
-    position: relative;
-}
-
-.slider-item { 
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    margin:0 auto;
-    transition: 300ms;
-    text-align: center;
-    opacity: 0;
-    visibility: hidden;
-    padding: 20px 5%;
-}
-
-.slider-item.active {
-    opacity: 1;
-    visibility: visible;
-}
-
-.slider-item img {
-    width: 100%;
-}
-
-.slider-nav { 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
-    padding: 0;
-}
-  
-.slider-nav button {
-    cursor: pointer;
-    font-size: 3em;
-    background: none;
-    border: none;
-}
-
-@media screen and (max-width: 576px) {
-    .slider-nav button {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .slider-nav button#previous-slide {
-        margin-left: -20px;
-    }
-
-    .slider-nav button#next-slide {
-        margin-right: -20px;
-    }
 }
