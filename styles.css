@@ -120,6 +120,9 @@ nav.main-menu ul {
   
 nav.main-menu a.brand {
     align-self: center;
+}
+
+nav.main-menu a.brand img {
     width: 8em;
 }
   
@@ -171,8 +174,8 @@ nav.main-menu ul li a.orange:hover, nav.main-menu ul li a.orange:active {
 }
   
 @media screen and (min-width: 875px) {
-    nav.main-menu a.brand {
-        width: 14em;
+    nav.main-menu a.brand img {
+        width: 12em;
     }
   
     nav.main-menu {
@@ -228,12 +231,6 @@ nav.main-menu ul li a.orange:hover, nav.main-menu ul li a.orange:active {
   
     nav.main-menu ul li a {
         padding: 2.2em 15px;
-    }
-}
-
-@media screen and (min-width: 1700px) {
-    nav.main-menu a.brand {
-        width: 14em;
     }
 }
 

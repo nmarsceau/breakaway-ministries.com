@@ -56,11 +56,11 @@
 }
 
 @media screen and (max-width: 768px) {
-    .slider-nav button#previous-slide {
-        margin-left: -20px;
+    .slider-nav button.previous-slide {
+        margin-left: -10px;
     }
 
-    .slider-nav button#next-slide {
-        margin-right: -20px;
+    .slider-nav button.next-slide {
+        margin-right: -10px;
     }
 }

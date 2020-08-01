@@ -15,7 +15,12 @@
 <body>
     <header class="mb-5">
         <nav class="main-menu shadow">
-            <a class="brand ml-3" href="index.html"><img src="images/logo.png" alt="" class="w-100" /></a>
+            <a class="brand ml-3" href="index.html">
+                <picture>
+                    <source type="image/webp" srcset="images/logo/logo.webp" />
+                    <img src="images/logo/logo.jpg" alt="" />
+                </picture>
+            </a>
             <button id="main-menu-toggle" type="button" aria-label="Toggle main menu"></button>
             <ul class="collapsed">
                 <li><a href="program.html">Program Details</a></li>
