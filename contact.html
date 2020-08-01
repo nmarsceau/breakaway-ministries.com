@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="title" content="" />
+    <meta name="description" content="" />
+    <meta name="keyword" content="" />
+    <title>Contact Us | Breakaway Sports Ministries</title>
+    <link href="reset.css" rel="stylesheet" type="text/css" />
+    <link href="bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="images/favicon.ico" />
+</head>
+<body>
+    <header class="mb-5">
+        <nav class="main-menu shadow">
+            <a class="brand ml-3" href="index.html">
+                <picture>
+                    <source type="image/webp" srcset="images/logo/logo.webp" />
+                    <img src="images/logo/logo.jpg" alt="" />
+                </picture>
+            </a>
+            <button id="main-menu-toggle" type="button" aria-label="Toggle main menu"></button>
+            <ul class="collapsed">
+                <li><a href="program.html">Program Details</a></li>
+                <li><a href="philosophy.html">Our Philosophy</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="fall_2019.html" class="orange">Fall 2019</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="pt-4">
+        <div class="container">
+            <div class="row mt-4 mb-5">
+                <div class="col-12">
+                    <h1>Contact Us</h1>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-lg-8">
+                    <p>
+                        Want to hear more about Breakaway&apos;s ministry? Fill out the form below to
+                        sign up to receive general information and updates from Breakaway.
+                    </p>
+                </div>
+            </div>
+            <form class="validate" name="contact" method="post" netlify>
+                <div class="row mb-3">
+                    <div class="col-md-8 col-lg-5">
+                        <label class="d-block">
+                            Name<span class="required">required</span>
+                            <input type="text" name="name" class="form-control form-control-lg"
+                                required maxlength="250">
+                        </label>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-8 col-lg-5">
+                        <label class="d-block">
+                            Email Address<span class="required">required</span>
+                            <input type="email" name="email" class="form-control form-control-lg"
+                                required maxlength="320">
+                        </label>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-8 col-lg-5">
+                        <label class="d-block">
+                            Phone Number
+                            <input type="tel" name="phone" class="form-control form-control-lg"
+                                minlength="7" maxlength="17">
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <label>Address</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-lg-7">
+                        <label class="d-block">
+                            <small>Line 1</small>
+                            <input type="text" name="address-line-1" class="form-control form-control-lg"
+                                maxlength="250">
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-lg-7">
+                        <label class="d-block">
+                            <small>Line 2</small>
+                            <input type="text" name="address-line-2" class="form-control form-control-lg"
+                                maxlength="250">
+                        </label>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-4 col-lg-3">
+                        <label class="d-block">
+                            <small>City</small>
+                            <input type="text" name="city" class="form-control form-control-lg"
+                                maxlength="100">
+                        </label>
+                    </div>
+                    <div class="col-md-2">
+                        <label class="d-block">
+                            <small>State</small>
+                            <input type="text" name="state" class="form-control form-control-lg"
+                                minlength="2" maxlength="2">
+                        </label>
+                    </div>
+                    <div class="col-md-2">
+                        <label class="d-block">
+                            <small>Zip Code</small>
+                            <input type="text" name="zip" class="form-control form-control-lg"
+                                minlength="5" maxlength="5" pattern="[0-9]{5}">
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-lg-7">
+                        <label class="d-block">Comments</label>
+                        <textarea name="comment" rows="4" class="form-control form-control-lg count" maxlength="2500"></textarea>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-lg btn-success px-5">Send</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer class="footer bg-dark text-light py-4 px-3 py-sm-5 px-sm-5 mt-5">
+        &copy; 2018 Breakaway Sports Ministries
+        <address>Greenville, SC</address>
+        <a href="https://www.facebook.com/Breakaway-Sports-Ministries-81378962634/" target="_blank">
+            <img src="images/fb.png" alt="Facebook" width="40" height="40" />
+        </a>
+    </footer>
+    <script src="script.js"></script>
+    <script src="validate_form.js" async></script>
+    <script src="character_counter.js" async></script>
+</body>
+</html>

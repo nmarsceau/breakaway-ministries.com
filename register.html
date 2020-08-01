@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="title" content="" />
+    <meta name="description" content="" />
+    <meta name="keyword" content="" />
+    <title>Register | Breakaway Sports Ministries</title>
+    <link href="reset.css" rel="stylesheet" type="text/css" />
+    <link href="bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="images/favicon.ico" />
+</head>
+<body>
+    <header class="mb-5">
+        <nav class="main-menu shadow">
+            <a class="brand ml-3" href="index.html">
+                <picture>
+                    <source type="image/webp" srcset="images/logo/logo.webp" />
+                    <img src="images/logo/logo.jpg" alt="" />
+                </picture>
+            </a>
+            <button id="main-menu-toggle" type="button" aria-label="Toggle main menu"></button>
+            <ul class="collapsed">
+                <li><a href="program.html">Program Details</a></li>
+                <li><a href="philosophy.html">Our Philosophy</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="fall_2019.html" class="orange">Fall 2019</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="pt-4">
+        <div class="container">
+            <div class="row mt-4 mb-5">
+                <div class="col-12">
+                    <h1>Register</h1>
+                </div>
+                <div class="col-12">
+                    <p>
+                        Interested in hosting a Breakaway Sports program? We would love to hear from you! We think our program is a perfect fit for homeschool
+                        groups, church youth programs, or other community groups. Please fill out the form below to request contact from our team.
+                    </p>
+                </div>
+            </div>
+            <form class="validate" name="register" method="post" enctype="multipart/form-data" netlify>
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Direct Contact</h2>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-8 col-lg-6">
+                        <label class="d-block">
+                            Name<span class="required">required</span>
+                            <input type="text" name="name" class="form-control form-control-lg"
+                                required maxlength="250">
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-lg-4 mb-3">
+                        <label class="d-block">
+                            Email<span class="required">required</span>
+                            <input type="email" name="email" class="form-control form-control-lg"
+                                required maxlength="320">
+                        </label>
+                    </div>
+                    <div class="col-md-4 col-lg-3 mb-3">
+                        <label class="d-block">
+                            Phone Number<span class="required">required</span>
+                            <input type="tel" name="phone" class="form-control form-control-lg"
+                                required minlength="7" maxlength="17">
+                        </label>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-12">
+                        <h2>Organization Details</h2>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-6 col-lg-5">
+                        <label class="d-block">
+                            Organization Name<span class="required">required</span>
+                            <input type="text" name="organization-name" class="form-control form-control-lg"
+                                required maxlength="150">
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-lg-3 mt-3">
+                        <label class="d-block">
+                            City<span class="required">required</span>
+                            <input type="text" name="city" class="form-control form-control-lg"
+                                required maxlength="50">
+                        </label>
+                    </div>
+                    <div class="col-md-2 mt-3">
+                        <label class="d-block">
+                            State<span class="required">required</span>
+                            <input type="text" name="state" class="form-control form-control-lg"
+                                required minlength="2" maxlength="2">
+                        </label>
+                    </div>
+                    <div class="col-md-3 col-xl-2 mt-3">
+                        <label class="d-block">
+                            Zip Code<span class="required">required</span>
+                            <input type="text" name="zip" class="form-control form-control-lg"
+                                required minlength="5" maxlength="5" pattern="[0-9]{5}">
+                        </label>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-12 mb-3">
+                        <label class="d-block">
+                            Approximately what is your organization&apos;s size?<span class="required">required</span>
+                            <div class="row">
+                                <div class="col-md-4 col-lg-3">
+                                    <select name="organization-size" class="form-control form-control-lg"
+                                        required>
+                                        <option value="">-</option>
+                                        <option value="Less than 200">Less than 200</option>
+                                        <option value="200-500">200-500</option>
+                                        <option value="More than 500">More than 500</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-12">
+                        <h2>Facility Details</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <label>
+                            Does your organization have the facilities to run the program?<span class="required">required</span>
+                        </label>
+                    </div>
+                    <div class="col-12 have-facilities-question">
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label">
+                                <input type="radio" name="have-facilities-to-run-program" value="Yes" class="form-check-input" required>
+                                Yes
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label">
+                                <input type="radio" name="have-facilities-to-run-program" value="No" class="form-check-input" required>
+                                No
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div id="facilities-details" class="ml-4 ml-sm-5 d-none">
+                    <div class="row mt-3">
+                        <div class="col-12 col-md-10 col-lg-7">
+                            <label class="d-block">
+                                Please upload a photo of your facilities<span class="required">required</span>
+                                <input type="file" name="facilities-image" class="form-control-file mt-1"
+                                    accept=".jpg, .jpeg, .png">
+                                <p class="mt-2"><small><em>You may select one JPEG or PNG image that is less than 5 MB.</em></small></p>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-12 col-md-10 col-lg-7">
+                            <label class="d-block">
+                                Please estimate the length and width of pictured facilities<span class="required">required</span>
+                                <textarea name="facilities-description" rows="2" class="form-control form-control-lg" maxlength="500"></textarea>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-12">
+                        <h2>Program Details</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <label class="d-block">
+                            When do you want to do the program?<span class="required">required</span>
+                            <div class="row">
+                                <div class="col-12 col-md-3">
+                                    <select name="season" class="form-control form-control-lg"
+                                        required>
+                                        <option value="Fall">Fall</option>
+                                        <option value="Winter">Winter</option>
+                                        <option value="Spring">Spring</option>
+                                        <option value="Summer">Summer</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-12">
+                        <label class="d-block">
+                            Please provide a realistic estimate of the number of players in your program<span class="required">required</span>
+                            <div class="row">
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <select name="number-players" class="form-control form-control-lg"
+                                        required>
+                                        <option value="">-</option>
+                                        <option value="Less than 36">Less than 36</option>
+                                        <option value="36-72">36-72</option>
+                                        <option value="More than 72">More than 72</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-12">
+                        <label class="d-block">
+                            Please provide a realistic estimate of the number of volunteers you will have<span class="required">required</span>
+                            <div id="number-volunteers-suggestion-phrase" class="d-none">
+                                <strong>(We recommend <span id="number-volunteers-suggestion"></span>)</strong>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <select name="number-volunteers" class="form-control form-control-lg"
+                                        required>
+                                        <option value="">-</option>
+                                        <option value="8">8</option>
+                                        <option value="8-10">8-10</option>
+                                        <option value="10-12">10-12</option>
+                                        <option value="12-15">12-15</option>
+                                        <option value="More than 15">More than 15</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-lg-8">
+                        <h2>Comments</h2>
+                        <textarea name="comment" rows="4" class="form-control form-control-lg count" maxlength="2500"></textarea>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-md-8 col-lg-5">
+                        <button type="submit" class="btn btn-lg btn-orange px-5">Register My Organization</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer class="footer bg-dark text-light py-4 px-3 py-sm-5 px-sm-5 mt-5">
+        &copy; 2018 Breakaway Sports Ministries
+        <address>Greenville, SC</address>
+        <a href="https://www.facebook.com/Breakaway-Sports-Ministries-81378962634/" target="_blank">
+            <img src="images/fb.png" alt="Facebook" width="40" height="40" />
+        </a>
+    </footer>
+    <script src="script.js"></script>
+    <script src="validate_form.js" async></script>
+    <script src="character_counter.js" async></script>
+    <script>
+        const facilities_details_container = document.getElementById('facilities-details');
+        const have_facilities_question = document.querySelector('.have-facilities-question');
+        have_facilities_question.addEventListener('change', function(event) {
+            const selected_option = document.querySelector('[name="have-facilities-to-run-program"]:checked');
+            const facilities_questions = facilities_details_container.querySelectorAll('input, textarea');
+            if (selected_option === null || selected_option.value === 'No') {
+                facilities_details_container.classList.add('d-none');
+                for (let i = 0; i < facilities_questions.length; i++) {
+                    facilities_questions[i].required = false;
+                    facilities_questions[i].classList.remove('error');
+                    facilities_questions[i].removeAttribute('aria-describedby');
+                    if (facilities_questions[i].name === 'facilities-image') {
+                        delete facilities_questions[i].dataset.customValidator;
+                    }
+                }
+                const error_messages = facilities_details_container.querySelectorAll('.error-message');
+                for (let i = 0; i < error_messages.length; i++) {
+                    error_messages[i].remove();
+                }
+            }
+            else {
+                facilities_details_container.classList.remove('d-none');
+                for (let i = 0; i < facilities_questions.length; i++) {
+                    facilities_questions[i].required = true;
+                    if (facilities_questions[i].name === 'facilities-image') {
+                        facilities_questions[i].dataset.customValidator = 'validate_facility_photos';
+                    }
+                }
+            }
+        }, false);
+
+        const custom_validators = {
+            'validate_facility_photos': function(field) {
+                const incorrect_file_types = [];
+                let total_file_size = 0;
+                for (let i = 0; i < field.files.length; i++) {
+                    total_file_size += field.files[i].size;
+                    if (!['image/jpeg', 'image/png'].includes(field.files[i].type)) {
+                        incorrect_file_types.push(field.files[i].name);
+                    }
+                }
+                if (incorrect_file_types.length > 0) {
+                    return incorrect_file_types.join(', ') + (incorrect_file_types.length === 1 ? ' is not an accepted file type.' : ' are not accepted file types.');
+                }
+                if (total_file_size > 5242880) { // 5 MB
+                    return 'The file you selected is too large (' + (Math.round(total_file_size / 100000) / 10) + ' MB). The limit is 5 MB.';
+                }
+                return null;
+            }
+        };
+
+        const suggested_volunteers_for_players = {
+            'Less than 36': 'at least 8',
+            '36-72': '10-15',
+            'More than 72': '15 or more'
+        };
+        const number_players_input = document.querySelector('[name="number-players"]');
+        const number_volunteers_suggestion_phrase = document.getElementById('number-volunteers-suggestion-phrase');
+        const number_volunteers_suggestion = document.getElementById('number-volunteers-suggestion');
+        number_players_input.addEventListener('change', function(event) {
+            const number_players = number_players_input.value;
+            if (number_players === '') {
+                number_volunteers_suggestion_phrase.classList.add('d-none');
+            }
+            else {
+                number_volunteers_suggestion_phrase.classList.remove('d-none');
+                number_volunteers_suggestion.innerText = suggested_volunteers_for_players[number_players];
+            }
+        }, false);
+    </script>
+</body>
+</html>

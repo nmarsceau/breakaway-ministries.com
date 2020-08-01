@@ -1,0 +1,266 @@
+/* TABLE OF CONTENTS
+
+1. Global
+2. Navigation Bar
+3. Forms
+
+*/
+
+/******
+  1. Global
+******/
+body {
+    font-size: 1.2em;
+    font-family: sans-serif;
+}
+
+main {
+    min-height: 80vh;
+}
+  
+label {
+    line-height: 1.3em;
+    margin-bottom: 0px;
+}
+  
+h1, h2, h3, h4, h5, h6 {
+    font-style: oblique;
+    color: #0e3386;
+}
+  
+.bg-light-blue {
+    background-color: #aacaf4;
+}
+
+.btn-xl {
+    font-size: 2rem;
+    line-height: 1.75;
+    padding: 0.75rem 3.5rem;
+    border-radius: 0.35rem;
+}
+
+.btn-orange {
+    background-color: #f66733;
+    color: #ffffff;
+}
+.btn-orange:hover {
+    background-color: #ec460a;
+    color: #ffffff;
+}
+  
+.font-lg {
+    font-size: 1.5em;
+}
+
+.mission-statement {
+    font-style: oblique;
+    color: #0e3386;
+}
+
+.bullet-point-label {
+    font-size: 0.9em;
+}
+
+@media screen and (min-width: 576px) {
+    .bullet-point-label {
+        font-size: 1.1em;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .bullet-point-label {
+        font-size: 1.3em;
+    }
+}
+
+footer {
+    font-size: 0.8em;
+}
+
+@media screen and (min-width: 576px) {
+    footer {
+        font-size: 1em;
+    }
+}
+
+[class^="arrow"] {
+  border: solid #0e3386;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 10px;
+}
+.arrow-right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+.arrow-left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+/******
+  2. Navigation Bar
+******/
+nav.main-menu {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    height: 4em;
+    font-size: 1.3em;
+    background-color: #fff;
+    box-shadow: 0 15px 15px rgba(0, 0, 0, .2);
+}
+  
+nav.main-menu ul.collapsed {
+    display: none;
+}
+  
+nav.main-menu ul {
+    list-style-type: none;
+}
+  
+nav.main-menu a.brand {
+    align-self: center;
+}
+
+nav.main-menu a.brand img {
+    width: 8em;
+}
+  
+nav.main-menu button {
+    background-color: #fff;
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(14, 51, 134, 0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border: none;
+    cursor: pointer;
+    width: 3em;
+    height: 2em;
+    align-self: center;
+}
+  
+nav.main-menu ul {
+    position: absolute;
+    top: 4em;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 15px 15px rgba(0, 0, 0, .2);
+    padding: 10px 0px 0px;
+}
+  
+nav.main-menu ul li {
+    padding: 0;
+}
+
+nav.main-menu ul li a {
+    display: block;
+    padding: 15px 0px;
+    text-align: center;
+    color: #0e3386;
+}
+
+nav.main-menu ul li a.orange {
+    color: #f66733;
+}
+  
+nav.main-menu ul li a:hover, nav.main-menu ul li a:active {
+    background-color: #c8ddf7;
+    text-decoration: none;
+}
+
+nav.main-menu ul li a.orange:hover, nav.main-menu ul li a.orange:active {
+    background-color: #ffede5;
+    color: #f5490a;
+}
+  
+@media screen and (min-width: 875px) {
+    nav.main-menu a.brand img {
+        width: 12em;
+    }
+  
+    nav.main-menu {
+        font-size: 1.1em;
+        height: 6em;
+    }
+  
+    nav.main-menu button {
+        display: none;
+    }
+  
+    nav.main-menu ul.collapsed {
+        display: inline-block;
+    }
+  
+    nav.main-menu ul {
+        position: relative;
+        top: 0;
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+        text-align: right;
+    }
+  
+    nav.main-menu ul li {
+        display: inline-block;
+        height: 100%;
+    }
+  
+    nav.main-menu ul li a {
+        display: inline-block;
+        height: 100%;
+        padding: 2.2em 10px;
+    }
+  
+    nav.main-menu ul li a:focus, nav.main-menu ul li a:hover, nav.main-menu ul li a:active {
+        background-color: #fff;
+        color: #0d2275;
+        text-decoration-line: underline;
+        text-decoration-thickness: 2px;
+    }
+
+    nav.main-menu ul li a.orange:focus, nav.main-menu ul li a.orange:hover, nav.main-menu ul li a.orange:active {
+        background-color: #fff;
+        color: #e55622;
+    }
+}
+  
+@media screen and (min-width: 1000px) {
+    nav.main-menu {
+        font-size: 1.2em;
+    }
+  
+    nav.main-menu ul li a {
+        padding: 2.2em 15px;
+    }
+}
+
+/******
+  3. Forms
+******/
+span.required {
+    color: #ae1313;
+    font-size: 0.8em;
+    margin-left: 8px;
+    vertical-align: bottom;
+}
+
+span.optional {
+    color: #4040ce;
+    font-size: 0.8em;
+    margin-left: 8px;
+    vertical-align: bottom;
+}
+
+.error {
+    border: 1px solid #ae1313;
+}
+
+.error-message {
+    color: #ae1313;
+    font-size: 0.8em;
+    font-style: italic;
+    margin-left: 10px;
+}
