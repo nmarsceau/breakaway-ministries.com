@@ -13,7 +13,7 @@
     <link rel="shortcut icon" href="images/favicon.ico" />
 </head>
 <body>
-    <header class="mb-5">
+    <header class="mb-4 mb-sm-5">
         <nav class="main-menu shadow">
             <a class="brand ml-3" href="index.html"><img src="images/logo.png" alt="" class="w-100" /></a>
             <button id="main-menu-toggle" type="button" aria-label="Toggle main menu"></button>
@@ -25,52 +25,59 @@
             </ul>
         </nav>
     </header>
-    <main class="pt-4">
-        <section class="container mb-5">
-            <!-- TODO: Image carousel
-                https://medium.com/@agavitalis/a-simple-slider-carousel-using-vanilla-javascript-vitaslider-65bc1a5a93ef
-            <img src="images/soccer.png" alt="Children playing soccer" />
-            <img src="images/Fall2019.png" alt="Register for a Breakaway Program" />
-            -->
+    <main>
+        <section class="container mb-4 mb-sm-5">
+            <div class="row slider-wrapper">
+                <div class="col-12 slider">
+                    <figure class="slider-item">
+                        <img src="images/soccer.png" alt="Children playing soccer" />
+                    </figure>
+                    <figure class="slider-item">
+                        <img src="images/Fall2019.png" alt="Register for a Breakaway Program" />
+                    </figure>
+                    <nav class="slider-nav">
+                        <button class="previous-slide" aria-label="Previous Slide">&lang;</button>
+                        <button class="next-slide" aria-label="Next Slide">&rang;</button>
+                    </nav>
+                </div>
+            </div>
         </section>
-        <section class="bg-light-blue my-5 py-3">
+        <section class="bg-light-blue my-4 my-sm-5 py-3">
             <div class="container">
-                <div class="row">
-                    <div class="col text-center">
+                <div class="row justify-content-center">
+                    <div class="col col-lg-9 text-center">
                         <h1>Our Mission</h1>
-                        <!-- TODO: make sure this looks good on all screen sizes -->
-                        <p class="mission-statement font-lg">Equipping organizations to teach biblically and to reach evangelistically through sports</p>
+                        <p class="mission-statement font-lg">Equipping organizations to teach biblically and to reach evangelistically through sports.</p>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- TODO: change this to use figure and figcaption? -->
         <section class="container">
             <div class="row my-5">
-                <div class="col-6 col-lg-3 my-3">
+                <figure class="col-6 col-lg-3 my-3">
                     <a href="philosophy.html#bible">
-                        <img src="images/bullet_point_1.png" alt="" class="w-100">
-                        <p class="bullet-point-label text-dark text-center">Bible-believing</p>
+                        <img src="images/bullet_point_1.png" alt="" class="w-100" />
+                        <figcaption class="bullet-point-label text-dark text-center">Bible-believing</figcaption>
                     </a>
-                </div>
-                <div class="col-6 col-lg-3 my-3">
+                </figure>
+                <figure class="col-6 col-lg-3 my-3">
                     <a href="philosophy.html#gospel">
-                        <img src="images/bullet_point_2.png" alt="" class="w-100">
-                        <p class="bullet-point-label text-dark text-center">Gospel-focused</p>
+                        <img src="images/bullet_point_2.png" alt="" class="w-100" />
+                        <figcaption class="bullet-point-label text-dark text-center">Gospel-focused</figcaption>
                     </a>
-                </div>
-                <div class="col-6 col-lg-3 my-3">
+                </figure>
+                <figure class="col-6 col-lg-3 my-3">
                     <a href="philosophy.html#community">
-                        <img src="images/bullet_point_3.png" alt="" class="w-100">
-                        <p class="bullet-point-label text-dark text-center">Community-oriented</p>
+                        <img src="images/bullet_point_3.png" alt="" class="w-100" />
+                        <figcaption class="bullet-point-label text-dark text-center">Community-oriented</figcaption>
                     </a>
-                </div>
-                <div class="col-6 col-lg-3 my-3">
+                </figure>
+                <figure class="col-6 col-lg-3 my-3">
                     <a href="philosophy.html#sportsmanship">
-                        <img src="images/bullet_point_4.png" alt="" class="w-100">
-                        <p class="bullet-point-label text-dark text-center">Competitive Sportsmanship</p>
+                        <img src="images/bullet_point_4.png" alt="" class="w-100" />
+                        <figcaption class="bullet-point-label text-dark text-center">Competitive Sportsmanship</figcaption>
                     </a>
-                </div>
+                </figure>
             </div>
         </section>
     </main>
@@ -82,5 +89,6 @@
         </a>
     </footer>
     <script src="script.js"></script>
+    <script src="slider.js"></script>
 </body>
 </html>
