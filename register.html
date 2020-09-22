@@ -155,22 +155,12 @@
                         </div>
                     </div>
                 </div>
-                <div id="facilities-details" class="ml-4 ml-sm-5 d-none">
+                <div id="facilities-details" class="d-none">
                     <div class="row mt-3">
-                        <div class="col-12 col-md-10 col-lg-7">
+                        <div class="col-12 col-md-10 col-lg-8">
                             <label class="d-block">
-                                Please upload a photo of your facilities<span class="required">required</span>
-                                <input type="file" name="facilities-image" class="form-control-file mt-1"
-                                    accept=".jpg, .jpeg, .png">
-                                <p class="mt-2"><small><em>You may select one JPEG or PNG image that is less than 5 MB.</em></small></p>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="row mt-3">
-                        <div class="col-12 col-md-10 col-lg-7">
-                            <label class="d-block">
-                                Please estimate the length and width of pictured facilities<span class="required">required</span>
-                                <textarea name="facilities-description" rows="2" class="form-control form-control-lg" maxlength="500"></textarea>
+                                Please describe your facilities and estimate their length and width.<span class="required">required</span>
+                                <textarea name="facilities-description" rows="4" class="form-control form-control-lg" maxlength="1000"></textarea>
                             </label>
                         </div>
                     </div>
@@ -275,9 +265,6 @@
                     facilities_questions[i].required = false;
                     facilities_questions[i].classList.remove('error');
                     facilities_questions[i].removeAttribute('aria-describedby');
-                    if (facilities_questions[i].name === 'facilities-image') {
-                        delete facilities_questions[i].dataset.customValidator;
-                    }
                 }
                 const error_messages = facilities_details_container.querySelectorAll('.error-message');
                 for (let i = 0; i < error_messages.length; i++) {
@@ -288,32 +275,9 @@
                 facilities_details_container.classList.remove('d-none');
                 for (let i = 0; i < facilities_questions.length; i++) {
                     facilities_questions[i].required = true;
-                    if (facilities_questions[i].name === 'facilities-image') {
-                        facilities_questions[i].dataset.customValidator = 'validate_facility_photos';
-                    }
                 }
             }
         }, false);
-
-        const custom_validators = {
-            'validate_facility_photos': function(field) {
-                const incorrect_file_types = [];
-                let total_file_size = 0;
-                for (let i = 0; i < field.files.length; i++) {
-                    total_file_size += field.files[i].size;
-                    if (!['image/jpeg', 'image/png'].includes(field.files[i].type)) {
-                        incorrect_file_types.push(field.files[i].name);
-                    }
-                }
-                if (incorrect_file_types.length > 0) {
-                    return incorrect_file_types.join(', ') + (incorrect_file_types.length === 1 ? ' is not an accepted file type.' : ' are not accepted file types.');
-                }
-                if (total_file_size > 5242880) { // 5 MB
-                    return 'The file you selected is too large (' + (Math.round(total_file_size / 100000) / 10) + ' MB). The limit is 5 MB.';
-                }
-                return null;
-            }
-        };
 
         const suggested_volunteers_for_players = {
             'Less than 36': 'at least 8',
