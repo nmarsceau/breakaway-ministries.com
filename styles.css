@@ -3,6 +3,7 @@
 1. Global
 2. Navigation Bar
 3. Forms
+4. Skip to Main Content
 
 */
 
@@ -263,4 +264,25 @@ span.optional {
     font-size: 0.8em;
     font-style: italic;
     margin-left: 10px;
+}
+
+/******
+  4. Skip to Main Content
+ ******/
+a[href="#main-content"] {
+  z-index: 999;
+  position: fixed;
+  top: -100px;
+  padding: 0.5em 1em 0.75em;
+  left: 30px;
+  border-radius: 0px 0px 10px 10px;
+  box-shadow: 0px -3px 20px -2px #000;
+  background-color: #0d2275;
+  color: #fff;
+}
+
+a[href="#main-content"]:focus, a[href="#main-content"]:active {
+  top: 0;
+  text-decoration: underline;
+  outline: none;
 }
